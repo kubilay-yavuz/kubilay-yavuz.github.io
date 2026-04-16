@@ -53,8 +53,8 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-300",
-        scrolled ? "bg-background/80 backdrop-blur-md shadow-sm" : "bg-transparent",
+        "fixed top-0 w-full z-50 transition-all duration-500",
+        scrolled ? "glass-navbar" : "bg-transparent",
       )}
     >
       <div className="container mx-auto px-4 py-4">
@@ -89,7 +89,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation Menu */}
       {isOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-md">
+        <div className="md:hidden glass-card border-t-0 rounded-none">
           <div className="container mx-auto px-4 py-4">
             <nav className="flex flex-col space-y-4">
               {navLinks.map((link) => (

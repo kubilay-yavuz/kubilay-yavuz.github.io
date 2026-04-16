@@ -69,7 +69,10 @@ export default function TechStack() {
   }
 
   return (
-    <section id="tech-stack" className="py-20">
+    <section id="tech-stack" className="py-20 relative overflow-hidden">
+      {/* Background gradient orbs */}
+      <div className="gradient-orb gradient-orb-accent w-72 h-72 top-20 -left-36" />
+      <div className="gradient-orb gradient-orb-primary w-96 h-96 bottom-20 -right-48" />
       <div className="container mx-auto px-4">
         <motion.div
           initial="hidden"
@@ -96,10 +99,10 @@ export default function TechStack() {
               transition={{ duration: 0.5 }}
               variants={scaleUp}
             >
-              <Card className="h-full transition-all duration-300 hover:shadow-lg hover:border-primary/50">
+              <Card className="h-full glass-card transition-all duration-300 hover:shadow-2xl hover:border-primary/30">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="bg-primary/10 p-3 rounded-full">{category.icon}</div>
+                    <div className="bg-primary/20 p-3 rounded-full backdrop-blur-sm">{category.icon}</div>
                     <div>
                       <h3 className="text-lg font-semibold">{category.title}</h3>
                       <p className="text-sm text-muted-foreground">{category.description}</p>

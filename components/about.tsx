@@ -12,7 +12,10 @@ export default function About() {
   }
 
   return (
-    <section id="about" className="py-20 bg-muted/30">
+    <section id="about" className="py-20 relative overflow-hidden">
+      {/* Background gradient orbs */}
+      <div className="gradient-orb gradient-orb-primary w-96 h-96 -top-48 -left-48" />
+      <div className="gradient-orb gradient-orb-accent w-80 h-80 top-1/2 -right-40" />
       <div className="container mx-auto px-4">
         <motion.div
           initial="hidden"
@@ -65,10 +68,10 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.3 }}
               variants={fadeIn}
             >
-              <Card>
+              <Card className="glass-card hover:shadow-2xl transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-primary/10 p-3 rounded-full">
+                    <div className="bg-primary/20 p-3 rounded-full backdrop-blur-sm">
                       <Code className="h-6 w-6 text-primary" />
                     </div>
                     <div>
@@ -90,10 +93,10 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.4 }}
               variants={fadeIn}
             >
-              <Card>
+              <Card className="glass-card hover:shadow-2xl transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-primary/10 p-3 rounded-full">
+                    <div className="bg-primary/20 p-3 rounded-full backdrop-blur-sm">
                       <Rocket className="h-6 w-6 text-primary" />
                     </div>
                     <div>
@@ -116,10 +119,10 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.5 }}
               variants={fadeIn}
             >
-              <Card>
+              <Card className="glass-card hover:shadow-2xl transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-primary/10 p-3 rounded-full">
+                    <div className="bg-primary/20 p-3 rounded-full backdrop-blur-sm">
                       <Lightbulb className="h-6 w-6 text-primary" />
                     </div>
                     <div>
@@ -142,10 +145,10 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.6 }}
               variants={fadeIn}
             >
-              <Card>
+              <Card className="glass-card hover:shadow-2xl transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-primary/10 p-3 rounded-full">
+                    <div className="bg-primary/20 p-3 rounded-full backdrop-blur-sm">
                       <GraduationCap className="h-6 w-6 text-primary" />
                     </div>
                     <div>

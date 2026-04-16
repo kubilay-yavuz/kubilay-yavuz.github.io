@@ -72,9 +72,13 @@ export default function Hero() {
   }
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none"></div>
+      
+      {/* Glassmorphism gradient orbs */}
+      <div className="gradient-orb gradient-orb-primary w-[500px] h-[500px] top-20 -left-64" />
+      <div className="gradient-orb gradient-orb-accent w-[400px] h-[400px] bottom-20 left-1/3" />
 
       {/* Profile image positioned on the right side */}
       <div className="absolute right-0 top-0 h-full w-1/2 overflow-hidden hidden md:block">

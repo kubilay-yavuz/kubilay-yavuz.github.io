@@ -65,7 +65,10 @@ export default function Experience() {
   ]
 
   return (
-    <section id="experience" className="py-20">
+    <section id="experience" className="py-20 relative overflow-hidden">
+      {/* Background gradient orbs */}
+      <div className="gradient-orb gradient-orb-accent w-80 h-80 top-40 -right-40" />
+      <div className="gradient-orb gradient-orb-primary w-72 h-72 bottom-20 -left-36" />
       <div className="container mx-auto px-4">
         <motion.div
           initial="hidden"
@@ -92,7 +95,7 @@ export default function Experience() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               variants={fadeIn}
             >
-              <Card className="overflow-hidden">
+              <Card className="overflow-hidden glass-card">
                 <CardContent className="p-0">
                   <div className="p-6 border-b bg-muted/30">
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">

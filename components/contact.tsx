@@ -65,7 +65,10 @@ export default function Contact() {
   ]
 
   return (
-    <section id="contact" className="py-20 bg-muted/30">
+    <section id="contact" className="py-20 relative overflow-hidden">
+      {/* Background gradient orbs */}
+      <div className="gradient-orb gradient-orb-primary w-96 h-96 -top-48 -right-48" />
+      <div className="gradient-orb gradient-orb-accent w-72 h-72 bottom-20 -left-36" />
       <div className="container mx-auto px-4">
         <motion.div
           initial="hidden"
@@ -91,7 +94,7 @@ export default function Contact() {
             variants={fadeIn}
             className="lg:col-span-2"
           >
-            <Card>
+            <Card className="glass-card">
               <CardContent className="p-6">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <input type="hidden" name="_subject" value="Contact request from portfolio website" />
@@ -134,10 +137,10 @@ export default function Contact() {
           >
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
-                <Card key={index}>
+                <Card key={index} className="glass-card">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="bg-primary/10 p-3 rounded-full">{info.icon}</div>
+                      <div className="bg-primary/20 p-3 rounded-full backdrop-blur-sm">{info.icon}</div>
                       <div>
                         <h4 className="text-lg font-semibold mb-1">{info.title}</h4>
                         {info.link ? (
@@ -153,7 +156,7 @@ export default function Contact() {
                 </Card>
               ))}
 
-              <Card className="mt-8">
+              <Card className="mt-8 glass-card">
                 <CardContent className="p-6">
                   <h4 className="text-lg font-semibold mb-4">Connect With Me</h4>
                   <div className="flex flex-col gap-4">

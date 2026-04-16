@@ -135,7 +135,10 @@ export default function Projects() {
   ]
 
   return (
-    <section id="projects" className="py-20 bg-muted/30">
+    <section id="projects" className="py-20 relative overflow-hidden">
+      {/* Background gradient orbs */}
+      <div className="gradient-orb gradient-orb-primary w-80 h-80 top-40 -left-40" />
+      <div className="gradient-orb gradient-orb-accent w-96 h-96 bottom-40 -right-48" />
       <div className="container mx-auto px-4">
         <motion.div
           initial="hidden"
@@ -163,8 +166,8 @@ export default function Projects() {
               variants={fadeIn}
             >
               <Card
-                className={`group h-full cursor-pointer transition-all duration-300 hover:shadow-lg ${
-                  expandedProject === project.id ? "ring-2 ring-primary" : ""
+                className={`group h-full cursor-pointer glass-card transition-all duration-300 hover:shadow-2xl ${
+                  expandedProject === project.id ? "ring-2 ring-primary/50" : ""
                 }`}
                 onClick={() => setExpandedProject(expandedProject === project.id ? null : project.id)}
               >
@@ -286,7 +289,7 @@ export default function Projects() {
 
       {selectedProject && (
         <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
-          <DialogContent className="max-w-3xl">
+          <DialogContent className="max-w-3xl glass-card border-white/20">
             <DialogHeader>
               <DialogTitle>{selectedProject.title}</DialogTitle>
               <DialogDescription>
