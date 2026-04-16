@@ -9,28 +9,34 @@ import Footer from "@/components/footer"
 import Navbar from "@/components/navbar"
 
 export const metadata: Metadata = {
-  title: "Kubilay Yavuz | Portfolio",
-  description: "Professional portfolio of Kubilay Yavuz - Data Scientist, Project Manager, Consultant",
+  title: "Kubilay Yavuz | Senior Data Scientist & AI Builder",
+  description:
+    "Senior Data Scientist building production AI systems and agentic workflows. LLM applications, computer vision, and end-to-end ML deployment.",
 }
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Debug image to verify it's loading correctly */}
-      <div className="fixed top-0 right-0 p-2 z-50 hidden">
-        <img src="/images/kubilay-profile.png" alt="Debug" className="w-16 h-16 rounded-full border-2 border-red-500" />
+    <div className="min-h-screen bg-[#050816] relative">
+      {/* Aurora background */}
+      <div className="aurora-bg">
+        <div className="aurora-orb-3" />
       </div>
 
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Experience />
-        <TechStack />
-        <Projects />
-        <Contact />
-      </main>
-      <Footer />
+      {/* Grid overlay */}
+      <div className="fixed inset-0 bg-grid-pattern opacity-100 pointer-events-none z-0" />
+
+      <div className="relative z-10">
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          <Experience />
+          <TechStack />
+          <Projects />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
     </div>
   )
 }

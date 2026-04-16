@@ -2,27 +2,52 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="py-8 relative overflow-hidden glass-card border-x-0 border-b-0 rounded-none">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0">
-            <p className="text-lg font-bold text-primary">
-              Kubilay<span className="text-accent">Yavuz</span>
+    <footer className="py-8 relative overflow-hidden glass-navbar border-x-0 border-b-0">
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div>
+            <p className="font-heading text-lg font-bold">
+              <span className="text-cyan-400">Kubilay</span>
+              <span className="text-white">Yavuz</span>
             </p>
+            <p className="font-body text-xs text-slate-500 mt-0.5">Senior Data Scientist · AI Systems Builder</p>
           </div>
+
           <div className="text-center md:text-right">
-            <p className="text-muted-foreground">
+            <p className="text-slate-500 font-body text-sm">
               © {currentYear} Kubilay Yavuz. All rights reserved.
+            </p>
+            <div className="flex items-center justify-center md:justify-end gap-4 mt-2">
               <a
                 href="https://github.com/kubilay-yavuz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-2 hover:text-primary transition-colors"
+                className="text-slate-500 hover:text-cyan-400 transition-colors font-body text-xs"
               >
                 GitHub
               </a>
-            </p>
+              <span className="text-slate-700">·</span>
+              <a
+                href="https://linkedin.com/in/f-kubilay-yavuz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-500 hover:text-cyan-400 transition-colors font-body text-xs"
+              >
+                LinkedIn
+              </a>
+              <span className="text-slate-700">·</span>
+              <a
+                href="mailto:f.kubilay.yavuz@gmail.com"
+                className="text-slate-500 hover:text-cyan-400 transition-colors font-body text-xs"
+              >
+                Email
+              </a>
+            </div>
           </div>
+        </div>
+
+        <div className="mt-6">
+          <div className="accent-line mx-0 w-full h-px opacity-30" style={{ background: "linear-gradient(90deg, transparent, rgba(0,212,255,0.3), rgba(123,47,255,0.3), transparent)" }} />
         </div>
       </div>
     </footer>

@@ -2,33 +2,26 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
 import { toast } from "@/components/ui/use-toast"
-import { MapPin, Github, Linkedin } from "lucide-react"
+import { MapPin, Github, Linkedin, Mail, Phone } from "lucide-react"
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 24 },
     visible: { opacity: 1, y: 0 },
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // This is just for the loading state, Formspree handles the actual submission
     setIsSubmitting(true)
 
-    const form = e.target
+    const form = e.currentTarget
     const formData = new FormData(form)
 
     try {
-      const response = await fetch("https://formspree.io/f/fatihkub007@gmail.com", {
+      const response = await fetch("https://formspree.io/f/f.kubilay.yavuz@gmail.com", {
         method: "POST",
         body: formData,
         headers: {
@@ -57,19 +50,40 @@ export default function Contact() {
 
   const contactInfo = [
     {
-      icon: <MapPin className="h-6 w-6 text-primary" />,
+      icon: MapPin,
       title: "Location",
       value: "London, United Kingdom",
       link: null,
+      iconColor: "text-cyan-400",
+      iconBg: "from-cyan-500/20 to-cyan-500/5",
+      border: "border-cyan-500/20",
+    },
+    {
+      icon: Mail,
+      title: "Email",
+      value: "f.kubilay.yavuz@gmail.com",
+      link: "mailto:f.kubilay.yavuz@gmail.com",
+      iconColor: "text-violet-400",
+      iconBg: "from-violet-500/20 to-violet-500/5",
+      border: "border-violet-500/20",
+    },
+    {
+      icon: Phone,
+      title: "Phone",
+      value: "+44 7551 109127",
+      link: "tel:+447551109127",
+      iconColor: "text-blue-400",
+      iconBg: "from-blue-500/20 to-blue-500/5",
+      border: "border-blue-500/20",
     },
   ]
 
   return (
-    <section id="contact" className="py-20 relative overflow-hidden">
-      {/* Background gradient orbs */}
+    <section id="contact" className="py-24 relative overflow-hidden">
       <div className="gradient-orb gradient-orb-primary w-96 h-96 -top-48 -right-48" />
       <div className="gradient-orb gradient-orb-accent w-72 h-72 bottom-20 -left-36" />
-      <div className="container mx-auto px-4">
+
+      <div className="container mx-auto px-6">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -78,14 +92,15 @@ export default function Contact() {
           variants={fadeIn}
           className="text-center mb-16"
         >
-          <Badge variant="outline" className="mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full glass text-cyan-400 text-sm font-medium font-heading mb-4 border border-cyan-400/20">
             Contact
-          </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
-          <div className="w-20 h-1 bg-primary mx-auto"></div>
+          </span>
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-white">Get In Touch</h2>
+          <div className="accent-line" />
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Form */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -94,40 +109,63 @@ export default function Contact() {
             variants={fadeIn}
             className="lg:col-span-2"
           >
-            <Card className="glass-card">
-              <CardContent className="p-6">
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <input type="hidden" name="_subject" value="Contact request from portfolio website" />
+            <div className="glass-card rounded-2xl p-6 border border-white/10">
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <input type="hidden" name="_subject" value="Contact request from portfolio website" />
 
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Your Name</Label>
-                    <Input id="name" name="name" placeholder="John Doe" required />
-                  </div>
+                <div className="space-y-1.5">
+                  <label htmlFor="name" className="font-heading text-sm font-medium text-slate-300">
+                    Your Name
+                  </label>
+                  <input
+                    id="name"
+                    name="name"
+                    placeholder="John Doe"
+                    required
+                    className="glass-input w-full rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 font-body outline-none focus:border-cyan-400/40 transition-colors"
+                  />
+                </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Your Email</Label>
-                    <Input id="email" name="email" type="email" placeholder="john@example.com" required />
-                  </div>
+                <div className="space-y-1.5">
+                  <label htmlFor="email" className="font-heading text-sm font-medium text-slate-300">
+                    Your Email
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="john@example.com"
+                    required
+                    className="glass-input w-full rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 font-body outline-none focus:border-cyan-400/40 transition-colors"
+                  />
+                </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      placeholder="I'd like to discuss a project..."
-                      rows={6}
-                      required
-                    />
-                  </div>
+                <div className="space-y-1.5">
+                  <label htmlFor="message" className="font-heading text-sm font-medium text-slate-300">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="I'd like to discuss a project..."
+                    rows={6}
+                    required
+                    className="glass-input w-full rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 font-body outline-none focus:border-cyan-400/40 transition-colors resize-none"
+                  />
+                </div>
 
-                  <Button type="submit" className="w-full" disabled={isSubmitting}>
-                    {isSubmitting ? "Sending..." : "Send Message"}
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="glass-button-primary w-full font-heading font-semibold text-white px-8 py-3 rounded-xl disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                >
+                  {isSubmitting ? "Sending..." : "Send Message"}
+                </button>
+              </form>
+            </div>
           </motion.div>
 
+          {/* Contact info sidebar */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -135,46 +173,54 @@ export default function Contact() {
             transition={{ duration: 0.5, delay: 0.3 }}
             variants={fadeIn}
           >
-            <div className="space-y-6">
-              {contactInfo.map((info, index) => (
-                <Card key={index} className="glass-card">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="bg-primary/20 p-3 rounded-full backdrop-blur-sm">{info.icon}</div>
-                      <div>
-                        <h4 className="text-lg font-semibold mb-1">{info.title}</h4>
-                        {info.link ? (
-                          <a href={info.link} className="text-muted-foreground hover:text-primary transition-colors">
-                            {info.value}
-                          </a>
-                        ) : (
-                          <p className="text-muted-foreground">{info.value}</p>
-                        )}
-                      </div>
+            <div className="space-y-4">
+              {contactInfo.map((info) => (
+                <div key={info.title} className={`glass-card rounded-2xl p-5 border ${info.border}`}>
+                  <div className="flex items-start gap-4">
+                    <div className={`p-2.5 rounded-xl bg-gradient-to-br ${info.iconBg} border ${info.border}`}>
+                      <info.icon className={`h-5 w-5 ${info.iconColor}`} />
                     </div>
-                  </CardContent>
-                </Card>
+                    <div>
+                      <h4 className="font-heading font-semibold text-white text-sm mb-1">{info.title}</h4>
+                      {info.link ? (
+                        <a
+                          href={info.link}
+                          className="text-slate-400 hover:text-white transition-colors font-body text-sm"
+                        >
+                          {info.value}
+                        </a>
+                      ) : (
+                        <p className="text-slate-400 font-body text-sm">{info.value}</p>
+                      )}
+                    </div>
+                  </div>
+                </div>
               ))}
 
-              <Card className="mt-8 glass-card">
-                <CardContent className="p-6">
-                  <h4 className="text-lg font-semibold mb-4">Connect With Me</h4>
-                  <div className="flex flex-col gap-4">
-                    <Button variant="outline" className="justify-start" asChild>
-                      <a href="https://linkedin.com/in/f-kubilay-yavuz" target="_blank" rel="noopener noreferrer">
-                        <Linkedin className="h-5 w-5 mr-2" />
-                        LinkedIn
-                      </a>
-                    </Button>
-                    <Button variant="outline" className="justify-start" asChild>
-                      <a href="https://github.com/kubilay-yavuz" target="_blank" rel="noopener noreferrer">
-                        <Github className="h-5 w-5 mr-2" />
-                        GitHub
-                      </a>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
+              {/* Social links */}
+              <div className="glass-card rounded-2xl p-5 border border-white/10">
+                <h4 className="font-heading font-semibold text-white mb-4 text-sm">Connect With Me</h4>
+                <div className="flex flex-col gap-3">
+                  <a
+                    href="https://linkedin.com/in/f-kubilay-yavuz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="glass px-4 py-2.5 rounded-xl flex items-center gap-3 text-sm text-slate-300 hover:text-white hover:border-white/25 transition-all duration-300 font-body"
+                  >
+                    <Linkedin className="h-4 w-4 text-cyan-400" />
+                    linkedin.com/in/f-kubilay-yavuz
+                  </a>
+                  <a
+                    href="https://github.com/kubilay-yavuz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="glass px-4 py-2.5 rounded-xl flex items-center gap-3 text-sm text-slate-300 hover:text-white hover:border-white/25 transition-all duration-300 font-body"
+                  >
+                    <Github className="h-4 w-4 text-violet-400" />
+                    github.com/kubilay-yavuz
+                  </a>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>

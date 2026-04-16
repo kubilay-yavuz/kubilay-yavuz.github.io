@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import { Menu, X, Download } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 export default function Navbar() {
@@ -30,9 +29,8 @@ export default function Navbar() {
     }
   }
 
-  const handleDownloadCV = (e) => {
+  const handleDownloadCV = (e: React.MouseEvent) => {
     e.preventDefault()
-    // Create a temporary link element
     const link = document.createElement("a")
     link.href = "/Kubilay_Yavuz_CV.pdf"
     link.download = "Kubilay_Yavuz_CV.pdf"
@@ -57,10 +55,14 @@ export default function Navbar() {
         scrolled ? "glass-navbar" : "bg-transparent",
       )}
     >
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <button onClick={() => scrollToSection("home")} className="text-2xl font-bold text-primary">
-            Kubilay<span className="text-destructive">Yavuz</span>
+          <button
+            onClick={() => scrollToSection("home")}
+            className="font-heading text-xl font-bold"
+          >
+            <span className="text-cyan-400">Kubilay</span>
+            <span className="text-white">Yavuz</span>
           </button>
 
           {/* Desktop Navigation */}
@@ -69,42 +71,54 @@ export default function Navbar() {
               <button
                 key={link.name}
                 onClick={() => scrollToSection(link.href)}
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200"
               >
                 {link.name}
               </button>
             ))}
-            <Button onClick={handleDownloadCV} className="flex items-center gap-2">
+            <button
+              onClick={handleDownloadCV}
+              className="glass-button-primary font-heading text-sm font-semibold text-white px-5 py-2 rounded-xl flex items-center gap-2"
+            >
               <Download className="h-4 w-4" />
               Resume
-            </Button>
+            </button>
           </nav>
 
           {/* Mobile Navigation Toggle */}
-          <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <X /> : <Menu />}
-          </Button>
+          <button
+            className="md:hidden glass p-2 rounded-xl text-slate-300 hover:text-white transition-colors"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle navigation"
+          >
+            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
         </div>
       </div>
 
       {/* Mobile Navigation Menu */}
       {isOpen && (
-        <div className="md:hidden glass-card border-t-0 rounded-none">
-          <div className="container mx-auto px-4 py-4">
-            <nav className="flex flex-col space-y-4">
+        <div className="md:hidden glass-navbar border-t border-white/8">
+          <div className="container mx-auto px-6 py-4">
+            <nav className="flex flex-col space-y-1">
               {navLinks.map((link) => (
                 <button
                   key={link.name}
                   onClick={() => scrollToSection(link.href)}
-                  className="text-muted-foreground hover:text-foreground transition-colors py-2 text-left"
+                  className="font-body text-sm text-slate-400 hover:text-white transition-colors py-2.5 text-left px-2 rounded-lg hover:bg-white/5"
                 >
                   {link.name}
                 </button>
               ))}
-              <Button onClick={handleDownloadCV} className="w-full flex items-center justify-center gap-2">
-                <Download className="h-4 w-4" />
-                Resume
-              </Button>
+              <div className="pt-2">
+                <button
+                  onClick={handleDownloadCV}
+                  className="glass-button-primary w-full font-heading text-sm font-semibold text-white px-5 py-2.5 rounded-xl flex items-center justify-center gap-2"
+                >
+                  <Download className="h-4 w-4" />
+                  Resume
+                </button>
+              </div>
             </nav>
           </div>
         </div>
