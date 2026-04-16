@@ -78,18 +78,7 @@ export default function Hero() {
       <div className="container mx-auto px-6 relative z-10 pt-24 pb-12">
         <div className="max-w-3xl">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-6 text-sm text-amber-400 font-medium border border-amber-400/20"
-            >
-              <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
-              Available for opportunities · London, UK
-            </motion.div>
-
-            <h1 className="font-heading text-5xl md:text-7xl font-bold mb-4 leading-tight tracking-tight">
+<h1 className="font-heading text-5xl md:text-7xl font-bold mb-4 leading-tight tracking-tight">
               Hi, I&apos;m{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-200 via-amber-400 to-orange-500 glow-text">
                 Kubilay Yavuz
