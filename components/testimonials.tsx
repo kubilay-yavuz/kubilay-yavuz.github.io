@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { ChevronDown, MapPin, Calendar } from "lucide-react"
+import { ChevronDown, MapPin, Calendar, ExternalLink } from "lucide-react"
 
 export default function Experience() {
   const [expanded, setExpanded] = useState<number | null>(0)
@@ -81,6 +81,8 @@ export default function Experience() {
       tags: ["Unity", "C#", "iOS", "Android", "Game Design"],
       color: "from-orange-500/15 to-transparent",
       border: "border-orange-500/20",
+      link: "https://apps.apple.com/in/developer/eminence-games-ltd/id1779120399",
+      linkLabel: "App Store",
     },
     {
       title: "TripSorter",
@@ -90,6 +92,8 @@ export default function Experience() {
       tags: ["React Native", "Supabase", "LLM Agents", "Python"],
       color: "from-amber-500/15 to-transparent",
       border: "border-amber-500/15",
+      link: "https://apps.apple.com/in/app/trip-sorter/id6759809457",
+      linkLabel: "App Store",
     },
   ]
 
@@ -224,7 +228,7 @@ export default function Experience() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               variants={fadeIn}
             >
-              <div className={`glass-card rounded-2xl p-6 border ${item.border} h-full`}>
+              <div className={`glass-card rounded-2xl p-6 border ${item.border} h-full flex flex-col`}>
                 <div className="flex justify-between items-start mb-3">
                   <div>
                     <h3 className="font-heading font-bold text-white">{item.title}</h3>
@@ -232,9 +236,20 @@ export default function Experience() {
                       {item.role} · {item.period}
                     </p>
                   </div>
+                  {item.link && (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="glass px-3 py-1.5 rounded-lg flex items-center gap-1.5 text-xs text-amber-400 hover:text-amber-300 border border-amber-400/20 hover:border-amber-400/40 transition-all duration-200 shrink-0 ml-3"
+                    >
+                      <ExternalLink className="h-3 w-3" />
+                      {item.linkLabel}
+                    </a>
+                  )}
                 </div>
                 <p className="font-body text-sm text-slate-400 leading-relaxed mb-4">{item.desc}</p>
-                <div className="flex flex-wrap gap-1.5">
+                <div className="flex flex-wrap gap-1.5 mt-auto">
                   {item.tags.map((t) => (
                     <span key={t} className="skill-pill text-xs px-2.5 py-1 rounded-full text-slate-500 font-body">
                       {t}
