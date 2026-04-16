@@ -54,27 +54,27 @@ export default function Contact() {
       title: "Location",
       value: "London, United Kingdom",
       link: null,
-      iconColor: "text-cyan-400",
-      iconBg: "from-cyan-500/20 to-cyan-500/5",
-      border: "border-cyan-500/20",
+      iconColor: "text-amber-400",
+      iconBg: "from-amber-500/20 to-amber-500/5",
+      border: "border-amber-500/20",
     },
     {
       icon: Mail,
       title: "Email",
       value: "f.kubilay.yavuz@gmail.com",
       link: "mailto:f.kubilay.yavuz@gmail.com",
-      iconColor: "text-violet-400",
-      iconBg: "from-violet-500/20 to-violet-500/5",
-      border: "border-violet-500/20",
+      iconColor: "text-orange-400",
+      iconBg: "from-orange-500/20 to-orange-500/5",
+      border: "border-orange-500/20",
     },
     {
       icon: Phone,
       title: "Phone",
       value: "+44 7551 109127",
       link: "tel:+447551109127",
-      iconColor: "text-blue-400",
-      iconBg: "from-blue-500/20 to-blue-500/5",
-      border: "border-blue-500/20",
+      iconColor: "text-amber-300",
+      iconBg: "from-amber-500/15 to-amber-500/5",
+      border: "border-amber-500/15",
     },
   ]
 
@@ -92,7 +92,7 @@ export default function Contact() {
           variants={fadeIn}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full glass text-cyan-400 text-sm font-medium font-heading mb-4 border border-cyan-400/20">
+          <span className="inline-block px-4 py-1.5 rounded-full glass text-amber-400 text-sm font-medium font-heading mb-4 border border-amber-400/20">
             Contact
           </span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-white">Get In Touch</h2>
@@ -122,7 +122,7 @@ export default function Contact() {
                     name="name"
                     placeholder="John Doe"
                     required
-                    className="glass-input w-full rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 font-body outline-none focus:border-cyan-400/40 transition-colors"
+                    className="glass-input w-full rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 font-body outline-none focus:border-amber-400/40 transition-colors"
                   />
                 </div>
 
@@ -136,7 +136,7 @@ export default function Contact() {
                     type="email"
                     placeholder="john@example.com"
                     required
-                    className="glass-input w-full rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 font-body outline-none focus:border-cyan-400/40 transition-colors"
+                    className="glass-input w-full rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 font-body outline-none focus:border-amber-400/40 transition-colors"
                   />
                 </div>
 
@@ -150,7 +150,7 @@ export default function Contact() {
                     placeholder="I'd like to discuss a project..."
                     rows={6}
                     required
-                    className="glass-input w-full rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 font-body outline-none focus:border-cyan-400/40 transition-colors resize-none"
+                    className="glass-input w-full rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 font-body outline-none focus:border-amber-400/40 transition-colors resize-none"
                   />
                 </div>
 
@@ -207,7 +207,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className="glass px-4 py-2.5 rounded-xl flex items-center gap-3 text-sm text-slate-300 hover:text-white hover:border-white/25 transition-all duration-300 font-body"
                   >
-                    <Linkedin className="h-4 w-4 text-cyan-400" />
+                    <Linkedin className="h-4 w-4 text-amber-400" />
                     linkedin.com/in/f-kubilay-yavuz
                   </a>
                   <a
@@ -216,7 +216,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className="glass px-4 py-2.5 rounded-xl flex items-center gap-3 text-sm text-slate-300 hover:text-white hover:border-white/25 transition-all duration-300 font-body"
                   >
-                    <Github className="h-4 w-4 text-violet-400" />
+                    <Github className="h-4 w-4 text-orange-400" />
                     github.com/kubilay-yavuz
                   </a>
                 </div>

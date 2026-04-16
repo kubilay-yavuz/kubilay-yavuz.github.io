@@ -19,9 +19,9 @@ export default function Experience() {
       position: "Senior Data Scientist",
       period: "Feb 2022 – Present",
       location: "London, United Kingdom",
-      color: "from-cyan-500/20 to-cyan-500/5",
-      border: "border-cyan-500/20",
-      dot: "bg-cyan-400",
+      color: "from-amber-500/20 to-amber-500/5",
+      border: "border-amber-500/20",
+      dot: "bg-amber-400",
       achievements: [
         "Built an LLM workflow to interpret legacy property deeds and store structured outputs in PostgreSQL. Led 2 engineers to deliver backend and appraiser dashboard.",
         "Led end-to-end data platform migration for 2 clients — medallion architecture, Power BI dashboards for business users. Led team of 4 engineers through development and deployment.",
@@ -36,9 +36,9 @@ export default function Experience() {
       position: "Data Analyst",
       period: "Jul 2021 – Feb 2022",
       location: "Berlin, Germany",
-      color: "from-violet-500/20 to-violet-500/5",
-      border: "border-violet-500/20",
-      dot: "bg-violet-400",
+      color: "from-orange-500/20 to-orange-500/5",
+      border: "border-orange-500/20",
+      dot: "bg-orange-400",
       achievements: [
         "Designed and built 5 centralised dashboards for account managers — standardised manual work using Python, SQL, Airflow. Human hours spent decreased by ~70%.",
         "Architected end-to-end CRM data migration pipeline from Zoho to Salesforce across 5 countries. Built Flask-based frontend eliminating 3 days of manual reconciliation per cycle.",
@@ -51,9 +51,9 @@ export default function Experience() {
       position: "Data Scientist",
       period: "Feb 2020 – Jul 2021",
       location: "Istanbul, Turkey",
-      color: "from-blue-500/20 to-blue-500/5",
-      border: "border-blue-500/20",
-      dot: "bg-blue-400",
+      color: "from-amber-500/15 to-amber-500/5",
+      border: "border-amber-500/15",
+      dot: "bg-amber-300",
       achievements: [
         "Built end-to-end ML campaign optimisation project. Published 3 Tableau dashboards, hours reduced from 30 to ~6, ~17pp increase in client engagement.",
         "Developed and productionised ensemble pricing engine combining ML, operations research, and Bayesian models across 32+ product categories via internal APIs.",
@@ -70,8 +70,8 @@ export default function Experience() {
       period: "2025 – Present",
       desc: "Production AI platform for automated QA testing of mobile games. Multimodal agentic workflow using OpenCV/YOLO, PaddleOCR, GPT-4/Gemini on Android/iOS. FastAPI + Celery + Supabase + Docker on GCP. Built the customer-facing Next.js dashboard.",
       tags: ["FastAPI", "Celery", "OpenCV", "YOLO", "PaddleOCR", "GPT-4", "Next.js", "Supabase", "GCP", "Docker"],
-      color: "from-cyan-500/15 to-transparent",
-      border: "border-cyan-500/20",
+      color: "from-amber-500/15 to-transparent",
+      border: "border-amber-500/20",
     },
     {
       title: "Eminence Games",
@@ -79,8 +79,8 @@ export default function Experience() {
       period: "2024 – Present",
       desc: "Designed and published multiple mobile games and apps on iOS/Android. Responsible for gameplay systems, analytics, and economy design.",
       tags: ["Unity", "C#", "iOS", "Android", "Game Design"],
-      color: "from-violet-500/15 to-transparent",
-      border: "border-violet-500/20",
+      color: "from-orange-500/15 to-transparent",
+      border: "border-orange-500/20",
     },
     {
       title: "TripSorter",
@@ -88,8 +88,8 @@ export default function Experience() {
       period: "2024",
       desc: "AI-powered travel planning app generating dynamic, multi-day itineraries using LLM agentic workflows with external tools for routing, weather, and local logistics.",
       tags: ["React Native", "Supabase", "LLM Agents", "Python"],
-      color: "from-blue-500/15 to-transparent",
-      border: "border-blue-500/20",
+      color: "from-amber-500/15 to-transparent",
+      border: "border-amber-500/15",
     },
   ]
 
@@ -107,7 +107,7 @@ export default function Experience() {
           variants={fadeIn}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full glass text-cyan-400 text-sm font-medium font-heading mb-4 border border-cyan-400/20">
+          <span className="inline-block px-4 py-1.5 rounded-full glass text-amber-400 text-sm font-medium font-heading mb-4 border border-amber-400/20">
             Experience
           </span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-white">Professional Experience</h2>
@@ -207,7 +207,7 @@ export default function Experience() {
           variants={fadeIn}
           className="text-center mb-10"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full glass text-violet-400 text-sm font-medium font-heading mb-4 border border-violet-400/20">
+          <span className="inline-block px-4 py-1.5 rounded-full glass text-orange-400 text-sm font-medium font-heading mb-4 border border-orange-400/20">
             Founded
           </span>
           <h2 className="font-heading text-2xl md:text-3xl font-bold mb-4 text-white">Entrepreneurial Experience</h2>

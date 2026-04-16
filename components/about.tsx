@@ -14,33 +14,33 @@ export default function About() {
       icon: Brain,
       title: "Production AI Systems",
       desc: "LLM workflows, agentic pipelines, computer vision — deployed end-to-end, not just notebooks.",
-      color: "from-cyan-500/20 to-cyan-500/5",
-      border: "border-cyan-500/20",
-      iconColor: "text-cyan-400",
+      color: "from-amber-500/20 to-amber-500/5",
+      border: "border-amber-500/20",
+      iconColor: "text-amber-400",
     },
     {
       icon: Rocket,
       title: "Real Business Impact",
       desc: "118% margin improvement, 70% hour reduction, 20% pick-pack efficiency gains — at McKinsey, Getir, Infarm.",
-      color: "from-violet-500/20 to-violet-500/5",
-      border: "border-violet-500/20",
-      iconColor: "text-violet-400",
+      color: "from-orange-500/20 to-orange-500/5",
+      border: "border-orange-500/20",
+      iconColor: "text-orange-400",
     },
     {
       icon: Layers,
       title: "Full-Stack AI Delivery",
       desc: "From FastAPI backends and Celery workers to Next.js dashboards — I own the full stack.",
-      color: "from-blue-500/20 to-blue-500/5",
-      border: "border-blue-500/20",
-      iconColor: "text-blue-400",
+      color: "from-amber-500/15 to-amber-500/5",
+      border: "border-amber-500/15",
+      iconColor: "text-amber-300",
     },
     {
       icon: Award,
       title: "10+ Hackathon Awards",
       desc: "ING, SAP, Turkish Airlines, Euroleague — proven record of building fast under pressure.",
-      color: "from-emerald-500/20 to-emerald-500/5",
-      border: "border-emerald-500/20",
-      iconColor: "text-emerald-400",
+      color: "from-orange-500/15 to-orange-500/5",
+      border: "border-orange-500/15",
+      iconColor: "text-orange-300",
     },
   ]
 
@@ -58,7 +58,7 @@ export default function About() {
           variants={fadeIn}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full glass text-cyan-400 text-sm font-medium font-heading mb-4 border border-cyan-400/20">
+          <span className="inline-block px-4 py-1.5 rounded-full glass text-amber-400 text-sm font-medium font-heading mb-4 border border-amber-400/20">
             About Me
           </span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-white">Who I Am</h2>
@@ -84,28 +84,28 @@ export default function About() {
             </p>
             <p className="text-slate-400 mb-5 leading-relaxed font-body">
               Beyond consulting, I co-founded{" "}
-              <span className="text-cyan-400 font-medium">QApture Ops</span> — a production AI platform for automated
+              <span className="text-amber-400 font-medium">QApture Ops</span> — a production AI platform for automated
               mobile game QA using multimodal agentic AI (OpenCV, YOLO, PaddleOCR, GPT-4). I also co-founded{" "}
-              <span className="text-violet-400 font-medium">Eminence Games</span>, publishing mobile games and apps on
+              <span className="text-orange-400 font-medium">Eminence Games</span>, publishing mobile games and apps on
               iOS/Android.
             </p>
             <p className="text-slate-400 leading-relaxed font-body">
               I hold a BSc in Industrial Engineering from{" "}
               <span className="text-white font-medium">Bogazici University</span>, ranked in the{" "}
-              <span className="text-cyan-400 font-medium">top 0.01%</span> nationally. I combine mathematical rigour
+              <span className="text-amber-400 font-medium">top 0.01%</span> nationally. I combine mathematical rigour
               with engineering pragmatism to ship things that work.
             </p>
 
             {/* Education card */}
             <div className="mt-8 glass-card rounded-2xl p-5 border border-white/10">
               <div className="flex items-start gap-4">
-                <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-500/20 to-cyan-500/5 border border-cyan-500/20">
-                  <GraduationCap className="h-5 w-5 text-cyan-400" />
+                <div className="p-2.5 rounded-xl bg-gradient-to-br from-amber-500/20 to-amber-500/5 border border-amber-500/20">
+                  <GraduationCap className="h-5 w-5 text-amber-400" />
                 </div>
                 <div>
                   <p className="font-heading font-semibold text-white">Bogazici University</p>
                   <p className="text-slate-400 text-sm font-body">BSc Industrial Engineering · 2015–2020</p>
-                  <p className="text-cyan-400 text-sm font-body mt-1">Top 0.01% · National University Entrance Exam</p>
+                  <p className="text-amber-400 text-sm font-body mt-1">Top 0.01% · National University Entrance Exam</p>
                 </div>
               </div>
             </div>

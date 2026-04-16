@@ -20,9 +20,9 @@ export default function TechStack() {
       icon: BrainCircuit,
       title: "AI / ML",
       description: "LLMs, agentic workflows, computer vision, classical ML",
-      iconColor: "text-cyan-400",
-      iconBg: "from-cyan-500/20 to-cyan-500/5",
-      border: "border-cyan-500/20",
+      iconColor: "text-amber-400",
+      iconBg: "from-amber-500/20 to-amber-500/5",
+      border: "border-amber-500/20",
       skills: [
         "LLMs (OpenAI, Claude, Gemini)",
         "Agentic Workflows",
@@ -42,9 +42,9 @@ export default function TechStack() {
       icon: Server,
       title: "Backend & Infrastructure",
       description: "APIs, distributed systems, cloud, MLOps",
-      iconColor: "text-violet-400",
-      iconBg: "from-violet-500/20 to-violet-500/5",
-      border: "border-violet-500/20",
+      iconColor: "text-orange-400",
+      iconBg: "from-orange-500/20 to-orange-500/5",
+      border: "border-orange-500/20",
       skills: [
         "Python",
         "FastAPI",
@@ -65,9 +65,9 @@ export default function TechStack() {
       icon: Database,
       title: "Data Engineering",
       description: "SQL, pipelines, warehousing, BI tools",
-      iconColor: "text-blue-400",
-      iconBg: "from-blue-500/20 to-blue-500/5",
-      border: "border-blue-500/20",
+      iconColor: "text-amber-300",
+      iconBg: "from-amber-500/15 to-amber-500/5",
+      border: "border-amber-500/15",
       skills: [
         "SQL",
         "PySpark",
@@ -106,7 +106,7 @@ export default function TechStack() {
           variants={fadeIn}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full glass text-cyan-400 text-sm font-medium font-heading mb-4 border border-cyan-400/20">
+          <span className="inline-block px-4 py-1.5 rounded-full glass text-amber-400 text-sm font-medium font-heading mb-4 border border-amber-400/20">
             Skills
           </span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-white">Technical Expertise</h2>

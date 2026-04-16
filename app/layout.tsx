@@ -1,19 +1,13 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Space_Grotesk, DM_Sans } from "next/font/google"
+import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 
-const spaceGrotesk = Space_Grotesk({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-heading",
-  weight: ["300", "400", "500", "600", "700"],
-})
-
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-body",
-  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-inter",
+  display: "swap",
 })
 
 export const metadata: Metadata = {
@@ -29,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${spaceGrotesk.variable} ${dmSans.variable} font-body`}>
+      <body className={`${inter.variable} font-sans`}>
         <ThemeProvider defaultTheme="dark">{children}</ThemeProvider>
       </body>
     </html>

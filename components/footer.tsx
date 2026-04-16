@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div>
             <p className="font-heading text-lg font-bold">
-              <span className="text-cyan-400">Kubilay</span>
+              <span className="text-amber-400">Kubilay</span>
               <span className="text-white">Yavuz</span>
             </p>
             <p className="font-body text-xs text-slate-500 mt-0.5">Senior Data Scientist · AI Systems Builder</p>
@@ -22,7 +22,7 @@ export default function Footer() {
                 href="https://github.com/kubilay-yavuz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-500 hover:text-cyan-400 transition-colors font-body text-xs"
+                className="text-slate-500 hover:text-amber-400 transition-colors font-body text-xs"
               >
                 GitHub
               </a>
@@ -31,14 +31,14 @@ export default function Footer() {
                 href="https://linkedin.com/in/f-kubilay-yavuz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-500 hover:text-cyan-400 transition-colors font-body text-xs"
+                className="text-slate-500 hover:text-amber-400 transition-colors font-body text-xs"
               >
                 LinkedIn
               </a>
               <span className="text-slate-700">·</span>
               <a
                 href="mailto:f.kubilay.yavuz@gmail.com"
-                className="text-slate-500 hover:text-cyan-400 transition-colors font-body text-xs"
+                className="text-slate-500 hover:text-amber-400 transition-colors font-body text-xs"
               >
                 Email
               </a>
@@ -47,7 +47,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-6">
-          <div className="accent-line mx-0 w-full h-px opacity-30" style={{ background: "linear-gradient(90deg, transparent, rgba(0,212,255,0.3), rgba(123,47,255,0.3), transparent)" }} />
+          <div className="accent-line mx-0 w-full h-px opacity-30" style={{ background: "linear-gradient(90deg, transparent, rgba(251,191,36,0.3), rgba(249,115,22,0.3), transparent)" }} />
         </div>
       </div>
     </footer>

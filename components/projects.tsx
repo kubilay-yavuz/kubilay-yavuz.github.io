@@ -37,7 +37,7 @@ export default function Projects() {
       description:
         "Co-founded and built a production AI platform that autonomously plays and tests mobile games using computer vision, OCR, and LLM-powered decision-making.",
       useIcon: true,
-      icon: <Zap className="h-10 w-10 text-cyan-400" />,
+      icon: <Zap className="h-10 w-10 text-amber-400" />,
       tags: ["FastAPI", "Celery", "OpenCV", "YOLO", "PaddleOCR", "GPT-4", "Gemini", "Next.js", "Supabase", "GCP", "Docker"],
       features: [
         "Multimodal agentic workflow: perceives screen state via CV/OCR, selects actions via LLM tool use",
@@ -76,7 +76,7 @@ export default function Projects() {
       description:
         "Developed and productionised multiple pricing engines combining machine learning, operations research, and Bayesian approaches.",
       useIcon: true,
-      icon: <Target className="h-10 w-10 text-violet-400" />,
+      icon: <Target className="h-10 w-10 text-orange-400" />,
       tags: ["Python", "Operations Research", "Bayesian", "LightGBM", "Elasticity Modelling", "MLOps"],
       features: [
         "Elasticity-based pricing engine deployed at scale — 118% quarterly margin improvement",
@@ -95,7 +95,7 @@ export default function Projects() {
       description:
         "Built a warehouse optimisation system using mixed-integer programming and TSP routing applied across 7 warehouses.",
       useIcon: true,
-      icon: <Route className="h-10 w-10 text-blue-400" />,
+      icon: <Route className="h-10 w-10 text-amber-400" />,
       tags: ["Python", "Operations Research", "Mixed-Integer Programming", "TSP", "Optimisation"],
       features: [
         "Mixed-integer programming for shelf assignment and item placement",
@@ -162,7 +162,7 @@ export default function Projects() {
           variants={fadeIn}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full glass text-cyan-400 text-sm font-medium font-heading mb-4 border border-cyan-400/20">
+          <span className="inline-block px-4 py-1.5 rounded-full glass text-amber-400 text-sm font-medium font-heading mb-4 border border-amber-400/20">
             Portfolio
           </span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-white">Featured Projects</h2>
@@ -181,7 +181,7 @@ export default function Projects() {
             >
               <div
                 className={`group h-full cursor-pointer glass-card rounded-2xl overflow-hidden transition-all duration-300 ${
-                  expandedProject === project.id ? "border-cyan-500/30" : "border-white/10"
+                  expandedProject === project.id ? "border-amber-500/30" : "border-white/10"
                 }`}
                 onClick={() => setExpandedProject(expandedProject === project.id ? null : project.id)}
               >
@@ -200,7 +200,7 @@ export default function Projects() {
                       />
                     </div>
                   )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#050816]/95 via-[#050816]/40 to-transparent p-5 flex flex-col justify-end">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#000000]/95 via-[#000000]/40 to-transparent p-5 flex flex-col justify-end">
                     <h3 className="font-heading text-base font-bold mb-1 text-white leading-snug">{project.title}</h3>
                     <p className="text-slate-400 text-xs mb-3 font-body">{project.shortDescription}</p>
                     <div className="flex flex-wrap gap-1">
@@ -301,7 +301,7 @@ export default function Projects() {
                 <div className="p-3 text-center border-t border-white/5">
                   <ChevronDown
                     className={`w-4 h-4 mx-auto text-slate-600 transition-transform duration-300 ${
-                      expandedProject === project.id ? "rotate-180 text-cyan-400" : ""
+                      expandedProject === project.id ? "rotate-180 text-amber-400" : ""
                     }`}
                   />
                 </div>
@@ -344,7 +344,7 @@ export default function Projects() {
                 <ul className="space-y-2">
                   {selectedProject.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2.5 text-sm text-slate-400 font-body leading-relaxed">
-                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-400/60 mt-1.5 flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400/60 mt-1.5 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}

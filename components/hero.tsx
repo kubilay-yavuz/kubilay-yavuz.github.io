@@ -66,7 +66,7 @@ export default function Hero() {
       <div className="absolute right-0 top-0 h-full w-2/5 overflow-hidden hidden lg:block pointer-events-none">
         <div
           className="absolute inset-0 z-10"
-          style={{ background: "linear-gradient(to right, #050816 0%, rgba(5,8,22,0.4) 40%, transparent 100%)" }}
+          style={{ background: "linear-gradient(to right, #000000 0%, rgba(0,0,0,0.4) 40%, transparent 100%)" }}
         />
         <img
           src="/images/kubilay-profile.png"
@@ -83,22 +83,22 @@ export default function Hero() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-6 text-sm text-cyan-400 font-medium border border-cyan-400/20"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-6 text-sm text-amber-400 font-medium border border-amber-400/20"
             >
-              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
               Available for opportunities · London, UK
             </motion.div>
 
             <h1 className="font-heading text-5xl md:text-7xl font-bold mb-4 leading-tight tracking-tight">
               Hi, I&apos;m{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-violet-500 glow-text">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-200 via-amber-400 to-orange-500 glow-text">
                 Kubilay Yavuz
               </span>
             </h1>
 
             <h2 className="font-heading text-xl md:text-2xl font-medium text-slate-300 mb-6 h-8">
               <span className="text-white">{text}</span>
-              <span className="animate-blink text-cyan-400">|</span>
+              <span className="animate-blink text-amber-400">|</span>
             </h2>
 
             <p className="text-base md:text-lg text-slate-400 mb-10 max-w-xl leading-relaxed font-body">

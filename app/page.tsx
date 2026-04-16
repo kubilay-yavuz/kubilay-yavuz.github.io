@@ -16,16 +16,13 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#050816] relative">
+    <div className="min-h-screen bg-black relative">
       {/* Aurora background */}
       <div className="aurora-bg">
         <div className="aurora-orb-3" />
       </div>
 
-      {/* Grid overlay */}
-      <div className="fixed inset-0 bg-grid-pattern opacity-100 pointer-events-none z-0" />
-
-      <div className="relative z-10">
+<div className="relative z-10">
         <Navbar />
         <main>
           <Hero />
