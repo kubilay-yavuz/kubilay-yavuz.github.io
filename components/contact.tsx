@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { toast } from "@/components/ui/use-toast"
-import { MapPin, Github, Linkedin, Mail, Phone } from "lucide-react"
+import { MapPin, Github, Linkedin, Mail } from "lucide-react"
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -66,15 +66,6 @@ export default function Contact() {
       iconColor: "text-orange-400",
       iconBg: "from-orange-500/20 to-orange-500/5",
       border: "border-orange-500/20",
-    },
-    {
-      icon: Phone,
-      title: "Phone",
-      value: "+44 7551 109127",
-      link: "tel:+447551109127",
-      iconColor: "text-amber-300",
-      iconBg: "from-amber-500/15 to-amber-500/5",
-      border: "border-amber-500/15",
     },
   ]
 

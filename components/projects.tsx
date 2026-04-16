@@ -38,7 +38,7 @@ export default function Projects() {
         "Co-founded and built a production AI platform that autonomously plays and tests mobile games using computer vision, OCR, and LLM-powered decision-making.",
       useIcon: true,
       icon: <Zap className="h-10 w-10 text-amber-400" />,
-      tags: ["FastAPI", "Celery", "OpenCV", "YOLO", "PaddleOCR", "GPT-4", "Gemini", "Next.js", "Supabase", "GCP", "Docker"],
+      tags: ["FastAPI", "Celery", "OpenCV", "YOLO", "PaddleOCR", "GPT", "Claude" ,"Gemini", "Next.js", "Supabase", "GCP", "Docker"],
       features: [
         "Multimodal agentic workflow: perceives screen state via CV/OCR, selects actions via LLM tool use",
         "FastAPI agent orchestration API + Celery for distributed task execution",
@@ -47,7 +47,7 @@ export default function Projects() {
         "Structured test reports with annotated screenshots, bounding boxes, and failure summaries",
       ],
       fullDescription:
-        "Co-founded QApture Ops and built the entire platform from scratch — a production AI system for automated QA testing of mobile games. The system uses a multimodal agentic workflow that autonomously plays and tests games on Android/iOS devices using computer vision (OpenCV, YOLO), OCR (PaddleOCR), and LLM-powered decision-making (GPT-4, Gemini). The agent operates in a reasoning loop: perceiving screen state via CV/OCR, selecting actions through LLM tool use, executing commands on remote devices, and generating structured test reports. Built the full backend infrastructure (FastAPI + Celery + Supabase + Docker on GCP) and the customer-facing Next.js dashboard.",
+        "Co-founded QApture Ops and built the entire platform from scratch — a production AI system for automated QA testing of mobile games. The system uses a multimodal agentic workflow that autonomously plays and tests games on Android/iOS devices using computer vision (OpenCV, YOLO), OCR (PaddleOCR), and LLM-powered decision-making (GPT, Claude, Gemini). The agent operates in a reasoning loop: perceiving screen state via CV/OCR, selecting actions through LLM tool use, executing commands on remote devices, and generating structured test reports. Built the full backend infrastructure (FastAPI + Celery + Supabase + Docker on GCP) and the customer-facing Next.js dashboard.",
     },
     {
       id: 1,

@@ -85,7 +85,7 @@ export default function About() {
             <p className="text-slate-400 mb-5 leading-relaxed font-body">
               Beyond consulting, I co-founded{" "}
               <span className="text-amber-400 font-medium">QApture Ops</span> — a production AI platform for automated
-              mobile game QA using multimodal agentic AI (OpenCV, YOLO, PaddleOCR, GPT-4). I also co-founded{" "}
+              mobile game QA using multimodal agentic AI (OpenCV, YOLO, PaddleOCR, GPT, Claude). I also co-founded{" "}
               <span className="text-orange-400 font-medium">Eminence Games</span>, publishing mobile games and apps on
               iOS/Android.
             </p>
